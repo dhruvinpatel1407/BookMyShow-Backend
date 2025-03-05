@@ -2,6 +2,36 @@ const BookingCollection = require("../models/ShowBookingModel");
 const UserCollection = require("../models/userModel");
 const chalk = require("chalk");
 
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     Booking:
+ *       type: object
+ *       properties:
+ *         _id:
+ *           type: string
+ *           description: Booking ID
+ *         movie:
+ *           type: string
+ *           description: Name of the movie
+ *         seats:
+ *           type: array
+ *           items:
+ *             type: string
+ *           description: Array of seat numbers
+ *         slot:
+ *           type: string
+ *           description: Time slot of the show
+ *         user:
+ *           $ref: '#/components/schemas/User'
+ *       required:
+ *         - movie
+ *         - seats
+ *         - slot
+ */
+
+
 const createBooking = async (req, res) => {
   try {
     const { movie, seats, slot } = req.body;

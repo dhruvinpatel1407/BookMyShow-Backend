@@ -1,6 +1,8 @@
 const express = require("express");
 const chalk = require("chalk");
 const cors = require("cors");
+const swaggerUi = require('swagger-ui-express');
+const specs = require('./swagger');
 require("dotenv").config();
 const userRoutes = require("./routes/userRoutes");
 const bookingRoutes = require("./routes/showBookingRoute");
@@ -18,6 +20,9 @@ app.use(
   })
 );
 app.use(express.json());
+
+// Serve Swagger UI
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
 //Protected routes
 app.use("/api/users", userRoutes);

@@ -4,6 +4,32 @@ const { generateToken } = require("../config/auth");
 const chalk = require("chalk");
 const BookingCollection = require("../models/ShowBookingModel");
 
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     User:
+ *       type: object
+ *       properties:
+ *         _id:
+ *           type: string
+ *           description: User ID
+ *         userName:
+ *           type: string
+ *           description: Username
+ *         email:
+ *           type: string
+ *           format: email
+ *           description: User email
+ *         passWord:
+ *           type: string
+ *           description: User password (hashed)
+ *       required:
+ *         - userName
+ *         - email
+ *         - passWord
+ */
+
 const register = async (req, res) => {
   try {
     const { userName, email, passWord } = req.body;
