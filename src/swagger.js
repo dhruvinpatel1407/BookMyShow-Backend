@@ -1,4 +1,6 @@
 const swaggerJSDoc = require("swagger-jsdoc");
+const path = require("path");
+
 require("dotenv").config();
 const swaggerOptions = {
   definition: {
@@ -64,7 +66,7 @@ const swaggerOptions = {
       }
     ],
   },
-  apis: ["src/routes/**/*.js","src/controllers/**/*.js"], // Ensure this path is correct
+  apis: [path.join(__dirname, "routes/**/*.js"),path.join(__dirname, "controllers/**/*.js")], // Ensure this path is correct
 };
 
 const specs = swaggerJSDoc(swaggerOptions);
