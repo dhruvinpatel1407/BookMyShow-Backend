@@ -98,6 +98,24 @@ This project provides a backend system for managing movie bookings with the foll
 | GET    | `/api/booking/`    | Get last booking   |
 | GET    | `/api/booking/all` | Get all bookings   |
 
+## Swagger API Documentation
+
+The API documentation is generated using Swagger UI and can be accessed at the following endpoint:
+
+- **Swagger Link:** `https://bookmyshow-b92t.onrender.com//api-docs`
+- **Description:** This endpoint provides an interactive UI where you can:
+  - View all API endpoints
+  - Test API requests directly in the browser
+  - See request/response examples
+  - Explore API schemas
+
+To access the Swagger documentation in local System:
+1. Start the server using `npm run dev`
+2. Navigate to `http://localhost:{your_port}/api-docs` in your browser
+3. You'll see the Swagger UI interface where you can interact with the API
+
+The documentation is automatically updated with your routes and schemas, making it a powerful tool for both development and testing.
+
 ## Project Structure
 
 ```

@@ -55,10 +55,16 @@ const swaggerOptions = {
     servers: [
       {
         url: process.env.BACKEND_URL,
+        description: "Production server"
       },
+      {
+        url: "http://localhost:3000",
+        description: "Local Server"
+    
+      }
     ],
   },
-  apis: ["src/routes/**/*.js"], // Ensure this path is correct for your project
+  apis: ["src/routes/**/*.js","src/controllers/*.js"], // Ensure this path is correct
 };
 
 const specs = swaggerJSDoc(swaggerOptions);
