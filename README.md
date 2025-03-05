@@ -126,6 +126,7 @@ Project/
 │   ├── models/        # Data models
 │   ├── routes/        # API routes
 │   ├── middleware/    # Authentication middleware
+│   ├── swagger.js     # swagger congif file
 │   └── server.js      # Main server file
 ├── package.json       # Project dependencies
 └── README.md          # Project documentation

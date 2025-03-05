@@ -58,13 +58,13 @@ const swaggerOptions = {
         description: "Production server"
       },
       {
-        url: "http://localhost:3000",
+        url: "http://localhost:8080",
         description: "Local Server"
     
       }
     ],
   },
-  apis: ["src/routes/**/*.js","src/controllers/*.js"], // Ensure this path is correct
+  apis: ["src/routes/**/*.js","src/controllers/**/*.js"], // Ensure this path is correct
 };
 
 const specs = swaggerJSDoc(swaggerOptions);
